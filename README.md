@@ -1,5 +1,8 @@
-# ResetDocker
-This script will reset docker by removing everything to begin with a fresh start
-  - It will stop all running containers
-  - It will remove all containers and volumes associated with them
-  - It will remove all imgaes
+# Initial Server Setup
+This script will update the server & setup few required apps
+  - It will update the server and install following apps
+      1. Neofetch
+      2. Htop
+      3. Nano
+      4. ucaresystem-core
+          - This utility will do a system update, upgrade, unnecessary package removal.
