@@ -5,13 +5,13 @@ apt -y update;
 apt-get -y install neofetch htop nano;
 
 #Installing ucaresystem-core
-echo "Installing ucaresystem-core...">InitialServerSetup.log;
+echo "Installing ucaresystem-core...">>InitialServerSetup.log;
 apt -y install software-properties-common;
 add-apt-repository -y ppa:utappia/stable;
 apt-get -y install ucaresystem-core;
 
 #Running ucaresystem-core
-echo "Running ucaresystem-core...">InitialServerSetup.log;
+echo "Running ucaresystem-core...">>InitialServerSetup.log;
 ucaresystem-core;
-echo "Initial Setup Done...">InitialServerSetup.log;
+echo "Initial Setup Done...">>InitialServerSetup.log;
 exit 0
