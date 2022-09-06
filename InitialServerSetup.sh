@@ -4,6 +4,10 @@ echo "Installing Neofetch, Htop, Nano...">InitialServerSetup.log;
 apt -y update;
 apt-get -y install neofetch htop nano;
 
+#Changing date to IST
+unlink /etc/localtime;
+ln -s /usr/share/zoneinfo/Asia/Kolkata /etc/localtime;
+
 #Installing ucaresystem-core
 echo "Installing ucaresystem-core...">>InitialServerSetup.log;
 apt -y install software-properties-common;

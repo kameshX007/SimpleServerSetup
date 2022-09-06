@@ -6,3 +6,4 @@ This script will update the server & setup few required apps
       3. Nano
       4. Ucaresystem-core
           - This utility will do a system update, upgrade, unnecessary package removal.
+  - It will change date to IST
