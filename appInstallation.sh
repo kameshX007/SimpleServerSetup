@@ -17,6 +17,6 @@ if [ -z $x ]
 then
     installApps;
 else
-    echo "Installing $x ..." && apt -y update && apt-get -y install $x && echo "App Installation completed successfully...";
+    selectedApps=$(sed -n '10p' server.config) && echo "Installing $selectedApps ..." && apt -y update && apt-get -y install $selectedApps && echo "App Installation completed successfully...";
 fi
 exit 0
