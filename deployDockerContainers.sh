@@ -1,26 +1,13 @@
 #!/bin/sh
 createServiceFile(){
-    echo "Creating Service File";
-    echo "$1";
-    if [ $1 = '1' ]
-    then
-        echo "Portainer.sh">>services;
-    elif [ $1 = '2' ]
-    then
-        echo "Watchtower.sh">>services;
-    elif [$1 = '3' ]
-    then
-        echo "FileBrowser.sh">>services;
-    elif [$1 = '4' ]
-    then
-        echo "Qbittorrent.sh">>services;
-    elif [$1 = '5' ]
-    then
-        echo "Jellyfin.sh">>services;
-    elif [$1 = '6' ]
-    then
-        echo "CoadingWS.sh">>services;
-    fi
+    
+    [ $1 = '1' ] && echo "Portainer.sh">>services;
+    [ $1 = '2' ] && echo "Watchtower.sh">>services;
+    [ $1 = '3' ] && echo "FileBrowser.sh">>services;
+    [ $1 = '4' ] && echo "Qbittorrent.sh">>services;
+    [ $1 = '5' ] && echo "Jellyfin.sh">>services;
+    [ $1 = '6' ] && echo "CoadingWS.sh">>services;
+    
 }
 deployContainers(){
     dockerContainers=$(sed -n '16p' server.config);
@@ -33,7 +20,6 @@ deployContainers(){
         createServiceFile $word;
     done
 
-    echo "Executng service file";
     sh initiate.sh;
     cd ..;
     echo "Docker containers deployed successfully..."; 
