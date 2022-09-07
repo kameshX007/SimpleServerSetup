@@ -7,7 +7,7 @@ createServiceFile(){
         echo "Portainer.sh">>services && echo "Got Portainer";
     elif [ $1 = '2' ]
     then
-        echo "Watchtower.sh">>services;
+        echo "Watchtower.sh">>services && echo "Got Watchtower";
     elif [$1 = '3' ]
     then
         echo "FileBrowser.sh">>services;
@@ -27,14 +27,14 @@ deployContainers(){
     git clone https://github.com/kameshX007/DockerDeployer.git
     cd DockerDeployer;
     rm -rf services;
-
+    ls;
     for word in $dockerContainers
     do
         createServiceFile $word;
     done
 
     echo "Executng service file";
-    sh initiate.sh;
+    #sh initiate.sh;
     cd ..;
     echo "Docker containers deployed successfully..."; 
 }
