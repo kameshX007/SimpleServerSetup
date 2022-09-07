@@ -15,7 +15,7 @@ deployContainers(){
     git clone https://github.com/kameshX007/DockerDeployer.git
     cd DockerDeployer;
     rm -rf services;
-    ls;
+    
     for word in $dockerContainers
     do
         createServiceFile $word;
