@@ -21,16 +21,17 @@ createServiceFile(){
     fi
 }
 deployContainers(){
+    dockerContainers=$(sed -n '16p' server.config);
     git clone https://github.com/kameshX007/DockerDeployer.git
     cd DockerDeployer;
     rm -rf services;
 
-    dockerContainers=$(sed -n '16p' server.config)
     for word in $dockerContainers
     do
         createServiceFile $word;
     done
 
+    echo "Executng service file";
     sh initiate.sh;
     cd ..;
     echo "Docker containers deployed successfully..."; 
