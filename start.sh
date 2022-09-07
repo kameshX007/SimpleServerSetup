@@ -45,7 +45,7 @@ echo "Do you want to change system date as per your timezone ? [y/N]">>server.co
 read x;
 if [ -z $x ]
 then
-    echo "N">>server.config;
+    echo "N">>server.config && echo "">>server.config && echo "">>server.config;
 elif [ $x = 'y' ]
 then
     echo "Y">>server.config && sh systemDateUpdate.sh;
@@ -53,7 +53,7 @@ elif [ $x = 'Y' ]
 then
     echo "Y">>server.config && sh systemDateUpdate.sh;
 else
-    echo "N">>server.config;
+    echo "N">>server.config && echo "">>server.config && echo "">>server.config;
 fi
 
 #Installing apps
@@ -62,7 +62,7 @@ echo "Do you want to install new apps ? [y/N]">>server.config
 read x;
 if [ -z $x ]
 then
-    echo "N">>server.config;
+    echo "N">>server.config && echo "">>server.config && echo "">>server.config;
 elif [ $x = 'y' ]
 then
     echo "Y">>server.config && sh appInstallation.sh;
@@ -70,7 +70,7 @@ elif [ $x = 'Y' ]
 then
     echo "Y">>server.config && sh appInstallation.sh;
 else
-    echo "N">>server.config;
+    echo "N">>server.config && echo "">>server.config && echo "">>server.config;
 fi
 
 #Installig Docker
