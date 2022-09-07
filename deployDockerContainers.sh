@@ -44,7 +44,7 @@ noAutomation(){
     echo "5) Jellyfin";
     echo "6) CoadingWS";
     echo "";
-    echo "Please enter the numbers seperated by space";
+    echo "Please enter the numbers seperated by space">>server.config;
 
     read x;
     if [ -z $x ]
