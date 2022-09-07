@@ -1,9 +1,9 @@
 #!/bin/sh
 #Installig Docker
-echo "Installig Docker..."
-git clone https://github.com/kameshX007/installDocker.git;
-cd installDocker;
-sh installDocker.sh;
+echo "Resetting Docker..."
+git clone https://github.com/kameshX007/ResetDocker.git
+cd ResetDocker;
+sh resetDocker.sh;
 cd ..
-echo "Docker installed successfully..."
+echo "Docker reset successfull..."
 exit 0
