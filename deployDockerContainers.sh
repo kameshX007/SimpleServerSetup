@@ -1,13 +1,13 @@
 #!/bin/sh
 createServiceFile(){
-    echo "Inside createServiceFile";
+    echo "Creating Service File";
     echo "$1";
     if [ $1 = '1' ]
     then
-        echo "Portainer.sh">>services && echo "Got Portainer";
+        echo "Portainer.sh">>services;
     elif [ $1 = '2' ]
     then
-        echo "Watchtower.sh">>services && echo "Got Watchtower";
+        echo "Watchtower.sh">>services;
     elif [$1 = '3' ]
     then
         echo "FileBrowser.sh">>services;
@@ -34,7 +34,7 @@ deployContainers(){
     done
 
     echo "Executng service file";
-    #sh initiate.sh;
+    sh initiate.sh;
     cd ..;
     echo "Docker containers deployed successfully..."; 
 }
