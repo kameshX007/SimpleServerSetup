@@ -10,4 +10,4 @@ This small utility will help you setup your server. It can use an existing serve
       4. Install Docker
             - It will install Docker and Docker compose
 
-  - Finally It will create a server.config file which you can use t setup server next time with exact same settngs.
+  - Finally It will create a server.config file which you can use to setup the server next time with exact same settngs.
