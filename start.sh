@@ -90,5 +90,22 @@ else
     echo "N">>server.config;
 fi
 
+#Deployig Docker containers
+echo "Do you want to deploy Docker containers ? [y/N]";
+echo "Do you want to deploy Docker containers ? [y/N]">>server.config
+read x;
+if [ -z $x ]
+then
+    echo "N">>server.config;
+elif [ $x = 'y' ]
+then
+    echo "Y">>server.config && sh deployDockerContainers.sh;
+elif [ $x = 'Y' ]
+then
+    echo "Y">>server.config && sh deployDockerContainers.sh;
+else
+    echo "N">>server.config;
+fi
+
 echo "Server setup has been completed successfully...";
 exit 0;
