@@ -30,8 +30,15 @@ then
     sh dockerInstallation.sh;
 fi
 
-#Deployig Docker containers
+#Reset Docker
 configData=$(sed -n '14p' server.config);
+if [ $configData = 'Y' ]
+then
+    sh ResetDocker.sh;
+fi
+
+#Deployig Docker containers
+configData=$(sed -n '16p' server.config);
 if [ $configData = 'Y' ]
 then
     sh deployDockerContainers.sh auto;

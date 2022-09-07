@@ -10,8 +10,8 @@ createServiceFile(){
     
 }
 deployContainers(){
-    dockerContainers=$(sed -n '16p' server.config);
-    dockerUser=$(sed -n '18p' server.config);
+    dockerContainers=$(sed -n '18p' server.config);
+    dockerUser=$(sed -n '20p' server.config);
     git clone https://github.com/kameshX007/DockerDeployer.git
     cd DockerDeployer;
     rm -rf services;

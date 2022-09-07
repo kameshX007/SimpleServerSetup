@@ -90,6 +90,24 @@ else
     echo "N">>server.config;
 fi
 
+#Docker Reset
+echo "Do you want to Reset Docker ? [y/N]";
+echo "Removing everything to begin with a fresh star";
+echo "Do you want to Reset Docker ? [y/N]">>server.config
+read x;
+if [ -z $x ]
+then
+    echo "N">>server.config;
+elif [ $x = 'y' ]
+then
+    echo "Y">>server.config && sh ResetDocker.sh;
+elif [ $x = 'Y' ]
+then
+    echo "Y">>server.config && sh ResetDocker.sh;
+else
+    echo "N">>server.config;
+fi
+
 #Deployig Docker containers
 echo "Do you want to deploy Docker containers ? [y/N]";
 echo "Do you want to deploy Docker containers ? [y/N]">>server.config
