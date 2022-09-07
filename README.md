@@ -11,3 +11,4 @@ This small utility will help you setup your server. It can use an existing serve
             - It will install Docker and Docker compose
 
   - Finally It will create a server.config file which you can use to setup the server next time with exact same settngs.
+  - Just run the start.sh with sudo
