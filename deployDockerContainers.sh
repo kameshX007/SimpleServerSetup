@@ -52,7 +52,7 @@ noAutomation(){
     read x;
     if [ -z $x ]
     then
-        echo "No Username entered, defaulting to ubuntu" && echo "ubuntu">>server.config;;
+        echo "No Username entered, defaulting to ubuntu" && echo "ubuntu">>server.config;
     else
         echo "$x">>server.config;
     fi
