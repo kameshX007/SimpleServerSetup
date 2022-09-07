@@ -21,7 +21,7 @@ configData=$(sed -n '8p' server.config);
 selectedApps=$(sed -n '10p' server.config);
 if [ $configData = 'Y' ]
 then
-    sh appInstallation.sh $selectedApps;
+    sh appInstallation.sh '$selectedApps';
 fi
 
 #Installig Docker
