@@ -11,6 +11,7 @@ createServiceFile(){
 }
 deployContainers(){
     dockerContainers=$(sed -n '16p' server.config);
+    dockerUser=$(sed -n '18p' server.config);
     git clone https://github.com/kameshX007/DockerDeployer.git
     cd DockerDeployer;
     rm -rf services;
@@ -20,7 +21,7 @@ deployContainers(){
         createServiceFile $word;
     done
 
-    sh initiate.sh;
+    sh initiate.sh $dockerUser;
     cd ..;
     echo "Docker containers deployed successfully..."; 
 }
@@ -33,6 +34,7 @@ noAutomation(){
     echo "5) Jellyfin";
     echo "6) CoadingWS";
     echo "";
+    echo "Please enter the numbers seperated by space";
     echo "Please enter the numbers seperated by space">>server.config;
 
     read x;
@@ -42,6 +44,19 @@ noAutomation(){
     else
         echo "$x">>server.config;
     fi
+
+    echo "Please enter the username";
+    echo "We will create a docker folder inside this users home directory to store the docker persistant volume"
+    echo "Please enter the username">>server.config;
+
+    read x;
+    if [ -z $x ]
+    then
+        echo "No Username entered, defaulting to ubuntu" && echo "ubuntu">>server.config;;
+    else
+        echo "$x">>server.config;
+    fi
+
 }
 #Deployig Docker containers
 autoExecution=$1;
