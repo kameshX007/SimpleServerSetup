@@ -1,8 +1,10 @@
 #!/bin/sh
 createServiceFile(){
+    echo "Inside createServiceFile";
+    echo "$1";
     if [ $1 = '1' ]
     then
-        echo "Portainer.sh">>services;
+        echo "Portainer.sh">>services && echo "GOt Portainer";;
     elif [ $1 = '2' ]
     then
         echo "Watchtower.sh">>services;
