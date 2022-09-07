@@ -4,7 +4,7 @@ createServiceFile(){
     echo "$1";
     if [ $1 = '1' ]
     then
-        echo "Portainer.sh">>services && echo "GOt Portainer";;
+        echo "Portainer.sh">>services && echo "Got Portainer";
     elif [ $1 = '2' ]
     then
         echo "Watchtower.sh">>services;
