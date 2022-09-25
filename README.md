@@ -1,5 +1,5 @@
 # Simple Server Setup
-This small utility will help you setup your server. It can use an existing server.config file and setup accordingly. Else it will guide you and setup as per your inputs.
+This small utility will help you setup your homelab server. It will guide you and setup as per your inputs.
   - It has following functionalities
       1. System Update
             - It installs and runs ucaresystem-core 
@@ -20,5 +20,4 @@ This small utility will help you setup your server. It can use an existing serve
                 5) Jellyfin
                 6) CoadingWS
         
-  - Finally It will create a server.config file which you can use to setup the server next time with exact same settngs.
-  - Just run the start.sh with sudo
+  - Just run the start.sh
