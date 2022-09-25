@@ -1,12 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 #ucaresystem-core
 echo "Do you want to install & run ucaresystem-core ? [y/N] (It is an all-in-one System Update and maintenance tool"
 echo "It will update, upgrade, clean unnecessary packages and data from server)"
 read x;
-if [ $x = 'y' ]
-then
-    sh systemUpdate.sh;
-elif [ $x = 'Y' ]
+if [[ "$x" == "y" || "$x" == "Y" ]]
 then
     sh systemUpdate.sh;
 fi
@@ -14,10 +11,7 @@ fi
 #Changing date to given timestamp
 echo "Do you want to change system date as per your timezone ? [y/N]";
 read x;
-if [ $x = 'y' ]
-then
-    sh systemDateUpdate.sh;
-elif [ $x = 'Y' ]
+if [[ "$x" == "y" || "$x" == "Y" ]]
 then
     sh systemDateUpdate.sh;
 fi
@@ -25,10 +19,7 @@ fi
 #Installing apps
 echo "Do you want to install new apps ? [y/N]";
 read x;
-if [ $x = 'y' ]
-then
-    sh appInstallation.sh;
-elif [ $x = 'Y' ]
+if [[ "$x" == "y" || "$x" == "Y" ]]
 then
     sh appInstallation.sh;
 fi
@@ -36,10 +27,7 @@ fi
 #Installig Docker
 echo "Do you want to install Docker ? [y/N]";
 read x;
-if [ $x = 'y' ]
-then
-    sh dockerInstallation.sh;
-elif [ $x = 'Y' ]
+if [[ "$x" == "y" || "$x" == "Y" ]]
 then
     sh dockerInstallation.sh;
 fi
@@ -48,10 +36,7 @@ fi
 echo "Do you want to Reset Docker ? [y/N]";
 echo "Removing everything to begin with a fresh star";
 read x;
-if [ $x = 'y' ]
-then
-    sh resetDocker.sh;
-elif [ $x = 'Y' ]
+if [[ "$x" == "y" || "$x" == "Y" ]]
 then
     sh resetDocker.sh;
 fi
@@ -59,10 +44,7 @@ fi
 #Deployig Docker containers
 echo "Do you want to deploy Docker containers ? [y/N]";
 read x;
-if [ $x = 'y' ]
-then
-    sh deployDockerContainers.sh;
-elif [ $x = 'Y' ]
+if [[ "$x" == "y" || "$x" == "Y" ]]
 then
     sh deployDockerContainers.sh;
 fi
