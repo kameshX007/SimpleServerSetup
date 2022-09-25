@@ -15,9 +15,9 @@ getUserName(){
     read x;
     if [ -z $x ]
     then
-        echo "No Username entered, defaulting to ubuntu" && dockerUser = "ubuntu";
+        echo "No Username entered, defaulting to ubuntu" && dockerUser="ubuntu";
     else
-        dockerUser = $x;
+        dockerUser=$x;
     fi
 }
 
@@ -51,7 +51,7 @@ if [ -z $x ]
 then
     echo "No containers selected, skipping docker container deployment";
 else
-    dockerContainers = $x && getUserName && deploySelectedContainers;
+    dockerContainers=$x && getUserName && deploySelectedContainers;
 fi
 
 exit 0
